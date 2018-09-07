@@ -87,10 +87,19 @@ function ArticleList() {
         'month'
       ]
     }
-  ]
+  ];
+
   return (
     <div>
-      Article List works!
+      {masterArticleList.map((article, index) =>
+        <Article title={article.title}
+          photoPath={article.photoPath}
+          url={article.url}
+          category={article.category}
+          key={index} />
+      )}
     </div>
   );
 }
+
+export default ArticleList;
